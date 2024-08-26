@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de protudos e serviços</title>
+</head>
+
+<body>
+    <a href="../index.html">voltar para home</a>
+    <h1>Cadastre seu produto ou serviço</h1>
+    <form id="form-produto" onsubmit="enviar(this)">
+        <select id="tipo" name="tipo">
+            <option value="produto">Produto</option>
+            <option value=" servico">Serviço</option>
+        </select>
+        <label for="img">caminho da imagem do Produto/Serviço:</label>
+        <input type="text" id="img" name="img" required>
+
+        <label for="nome">Nome do Produto/Serviço:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao"   required></textarea>
+
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" name="preco" required>
+
+        <button type="submit">Adicionar</button>  
+    </form>
+    <script type="module" src="../js/form.js"></script>
+</body>
+
+</html>
