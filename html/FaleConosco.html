@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fale Conosco</title>
+</head>
+<body>
+    <a href="../index.html">Voltar para a home</a>
+    <h1>Fale Conosco</h1>
+    <p>Entre em contato conosco para tirar suas dúvidas.</p>
+
+    <form id="form-fale-conosco" action="https://formsubmit.co/afonsodaniel985@gmail.com" method="POST" onsubmit="submitForm()">
+        <input type="hidden" name="_subject" value="Contato do Site - Petshop">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" name="email" required autofocus>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        function submitForm() {
+            // Envia o formulário normalmente
+            document.getElementById("form-fale-conosco").submit();
+
+            // Redireciona para a home
+            setTimeout(function() {
+                alert("Mensagem enviada, pode demorar um pouco para chegar.")
+                window.location.href = "../index.html";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

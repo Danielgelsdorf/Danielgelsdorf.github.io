@@ -1,12 +1,59 @@
 <!DOCTYPE html>
-<html lang="ptbr">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-    <h3>Bem vindo ao pet</h3>
-    <a href"/html/Sobre nos.html">Sobre nós</a>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <title>Meu Pet Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/home.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./html/meus_pets.html" autofocus>Meus Pets</a></li>
+                <li><a href="/html/FormCadastroPessoa.html">Cadastrar Cliente</a></li>
+                <li><a href="./html/reservas.html">Reservas</a></li>
+                <li><a href="/html/sobre nos.html">Sobre Nós</a></li>
+                <li><a href="./html/FaleConosco.html">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="produtos-servicos">
+        <h1> produtos</h1>
+        <div class="adicionar-produto">
+            <button onclick="cadastro()">Adicionar produto ou serviço</button>
+        </div>
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-produtos">
+            </tbody>
+        </table>
+
+        <h1> Serviços</h1>
+        <table class="tabela-servicos">
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-servicos">
+            </tbody>
+        </table>
+    </section>
+    <script type="module" src="js/manipulaTabela.js"></script>
 </body>
+
 </html>
