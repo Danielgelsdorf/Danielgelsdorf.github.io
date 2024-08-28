@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <title>Meu Pet Shop</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/home.js"></script>
@@ -11,11 +12,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Meus Pets</a></li>
-                <li><a href="#">Cadastrar Cliente</a></li>
-                <li><a href="#">Minhas Reservas</a></li>
+                <li><a href="./html/meus_pets.html" autofocus>Meus Pets</a></li>
+                <li><a href="/html/FormCadastroPessoa.html">Cadastrar Cliente</a></li>
+                <li><a href="./html/reservas.html">Reservas</a></li>
                 <li><a href="/html/sobre nos.html">Sobre Nós</a></li>
-                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="./html/FaleConosco.html">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
@@ -23,7 +24,7 @@
     <section class="produtos-servicos">
         <h1> produtos</h1>
         <div class="adicionar-produto">
-            <button onclick="cadastro()">Adicionar Produto</button>
+            <button onclick="cadastro()">Adicionar produto ou serviço</button>
         </div>
         <table class="tabela-produtos">
             <thead>
@@ -39,9 +40,6 @@
         </table>
 
         <h1> Serviços</h1>
-        <div class="adicionar-servico">
-            <button onclick="cadastro()"> Adicionar Serviço</button>
-        </div>
         <table class="tabela-servicos">
             <thead>
                 <tr>

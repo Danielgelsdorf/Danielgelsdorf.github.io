@@ -8,8 +8,8 @@
 <body>
     <a href="../index.html">voltar para home</a>
     <h1>Cadastre seu produto ou serviço</h1>
-    <form id="form-produto" onsubmit="enviar(this)">
-        <select id="tipo" name="tipo">
+    <form id="form-produto">
+        <select id="tipo" name="tipo" autofocus>
             <option value="produto">Produto</option>
             <option value=" servico">Serviço</option>
         </select>
@@ -27,7 +27,18 @@
 
         <button type="submit">Adicionar</button>  
     </form>
+    <script type="module" src="../js/model/ProdutoModel.js"></script>
+    <script type="module" src="../js/model/ServicoModel.js"></script>
     <script type="module" src="../js/form.js"></script>
+    
+    <script type="module">
+        import {enviarDados} from "../js/form.js";
+        const form = document.querySelector("#form-produto");
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            enviarDados(form);
+        });
+    </script>
 </body>
 
 </html>
