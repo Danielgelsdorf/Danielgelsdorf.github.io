@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário de Reserva de produto</title>
+</head>
+
+<body>
+    <h1>Agende sua Reserva</h1>
+    <form id="reserva_produto">
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required autofocus>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="select_produto">Produto</label>:</label>
+        <select id="select_produto" name="produto" required>
+        </select>
+
+        <label for="pessoa">Pessoa:</label>
+        <select id="pessoa" name="pessoa" required>
+        </select>
+
+        <button type="submit">Agendar</button>
+    </form>
+    <script type="module" src="../js/AgendarProduto.js"></script>
+    <script type="module">
+        import { reservarProduto} from "../js/AgendarProduto.js";
+        const form = document.querySelector("#reserva_produto");
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            reservarProduto(form);
+        });
+    </script>
+</body>
+</html>

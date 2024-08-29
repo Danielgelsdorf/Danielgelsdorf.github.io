@@ -1,18 +1,14 @@
-let produtos = JSON.parse(localStorage.getItem("produtos"));
-let servicos = JSON.parse(localStorage.getItem("servicos"));
 
-if (produtos === null) produtos = [];
-if (servicos === null) servicos = [];
+let pets = JSON.parse(localStorage.getItem("pets"));
+if (pets === null) pets = [];
 
-// Função para criar uma linha da tabela a partir de um objeto
-
-function criarLinha(objeto, container, storage) {
+function criarTabelaPets(objeto, container, storage) {
     objeto.forEach((obj, index) => {
         const novaLinha = document.createElement('tr');
         novaLinha.innerHTML = `
-            <td><img src="${obj.img}" alt="${obj.nome}"></td>
-            <td>${obj.descricao}</td>
-            <td>${obj.preco}</td>
+            <td>${obj.nome}</td>
+            <td>${obj.raca}</td>
+            <td>${obj.comportamento}</td>
         `;
         const celulaBotao = document.createElement('td');
         const botaoRemover = document.createElement('button');
@@ -30,13 +26,8 @@ function criarLinha(objeto, container, storage) {
         container.appendChild(novaLinha);
     });
 }
-//achando a tabela produtos
-const tabelaProdutos = document.getElementById('tabela-produtos');
-if (produtos.length > 0) {
-    criarLinha(produtos, tabelaProdutos, "produtos");
-}
-//achando a tabela de servicos
-const tabelaServicos = document.getElementById('tabela-servicos');
-if (servicos.length > 0) {
-    criarLinha(servicos, tabelaServicos, "servicos");
+//achando a tabela de pets
+const tabelaPets = document.getElementById('tabela-pets');
+if (pets.length > 0) {
+    criarTabelaPets(pets, tabelaPets, "pets");
 }
